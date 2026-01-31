@@ -14,7 +14,7 @@ const handleSubmit = (e) => {
     `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`,
   );
 
-  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=yourgmail@gmail.com&su=${subject}&body=${body}`;
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=charanc1147@gmail.com&su=${subject}&body=${body}`;
 
   window.open(gmailUrl, "_blank");
 };
