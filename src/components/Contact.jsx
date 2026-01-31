@@ -6,14 +6,19 @@ const Contact = () => {
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const handleSubmit = (e) => {
+  e.preventDefault();
 
-    const subject = `Portfolio Contact from ${form.name}`;
-    const body = `Name: ${form.name}%0AEmail: ${form.email}%0A%0AMessage:%0A${form.message}`;
+  const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`);
+  const body = encodeURIComponent(
+    `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`,
+  );
 
-    window.location.href = `mailto:yourgmail@gmail.com?subject=${subject}&body=${body}`;
-  };
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=yourgmail@gmail.com&su=${subject}&body=${body}`;
+
+  window.open(gmailUrl, "_blank");
+};
+
 
   return (
     <section
