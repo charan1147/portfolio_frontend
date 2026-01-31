@@ -1,29 +1,18 @@
 import React, { useState } from "react";
-import axios from "axios";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState(null);
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const res = await axios.post(
-        "https://portflio-backend-1-vcyt.onrender.comgiyt ",
-        form
-      );
-      setStatus({ type: "success", message: res.data.success });
-      setForm({ name: "", email: "", message: "" });
-    } catch (err) {
-      console.error(err);
-      setStatus({
-        type: "danger",
-        message: err.response?.data?.error || "Something went wrong!",
-      });
-    }
+
+    const subject = `Portfolio Contact from ${form.name}`;
+    const body = `Name: ${form.name}%0AEmail: ${form.email}%0A%0AMessage:%0A${form.message}`;
+
+    window.location.href = `mailto:yourgmail@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -32,9 +21,7 @@ const Contact = () => {
       className="contact-section animate__animated animate__fadeInUp"
     >
       <h2>Contact Me</h2>
-      {status && (
-        <div className={`alert alert-${status.type}`}>{status.message}</div>
-      )}
+
       <form onSubmit={handleSubmit}>
         <input
           name="name"
