@@ -1,4 +1,4 @@
-/* ============= Global / Body / Theme ============= */
+
 
 body {
   margin: 0;
@@ -22,7 +22,6 @@ body.dark {
   transition: all 0.3s ease;
 }
 
-/* ============= Header / Navbar ============= */
 
 .header {
   position: fixed;
@@ -150,12 +149,12 @@ body.light .theme-toggle:hover {
   color: #4b2e83;
 }
 
-/* Light theme */
+
 body.light .header {
   background: linear-gradient(90deg, #d0d2d5, #c0c0c0);
   box-shadow: 0px 4px 15px rgba(110, 64, 201, 0.2);
 }
-/* ============= Main Section ============= */
+
 
 .main-section {
   height: 100vh;
@@ -239,7 +238,6 @@ body.light .main-section button {
   box-shadow: 5px 5px 15px rgba(110, 64, 201, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.3);
 }
 
-/* ============= Sections: About, Skills, Projects, Contact ============= */
 
 section {
   padding: 40px 20px;
@@ -284,7 +282,6 @@ body.light .about-section p {
   color: #333333;
 }
 
-/* ============= Skills ============= */
 
 .skills-section ul {
   display: flex;
@@ -321,8 +318,6 @@ body.light .skills-section li:hover {
   background: rgba(224, 224, 224, 0.9);
 }
 
-/* ============= Projects ============= */
-/* PROJECTS SECTION */
 .projects-section {
   padding: 60px 20px;
   background-color: var(--bg);
@@ -335,7 +330,7 @@ body.light .skills-section li:hover {
   margin-bottom: 30px;
 }
 
-/* SLIDER CONTAINER */
+
 .project-slider {
   position: relative;
   display: flex;
@@ -346,7 +341,7 @@ body.light .skills-section li:hover {
   flex-wrap: wrap;
 }
 
-/* PROJECT CARD */
+
 .project-card {
   background-color: var(--card-bg, #222);
   padding: 20px;
@@ -368,11 +363,10 @@ body.light .skills-section li:hover {
   color: var(--text-light, #ccc);
 }
 
-/* IFRAME PREVIEW */
+
 .project-preview {
   position: relative;
   padding-bottom: 56.25%;
-  /* 16:9 aspect ratio */
   height: 0;
   overflow: hidden;
   margin-bottom: 20px;
@@ -389,7 +383,6 @@ body.light .skills-section li:hover {
   border-radius: 8px;
 }
 
-/* LINKS */
 .project-links {
   display: flex;
   justify-content: center;
@@ -410,7 +403,6 @@ body.light .skills-section li:hover {
   background-color: #532d99;
 }
 
-/* NAV BUTTONS */
 .nav-btn {
   font-size: 2rem;
   background: transparent;
@@ -440,7 +432,6 @@ body.light .skills-section li:hover {
   transform: translateY(-50%);
 }
 
-/* DOTS */
 .dots {
   margin-top: 20px;
 }
@@ -462,8 +453,6 @@ body.light .skills-section li:hover {
 }
 
 
-/* ============= Contact ============= */
-
 .contact-section {
   background-color: #0a0a0a;
   padding-top: 40px;
@@ -472,10 +461,6 @@ body.light .skills-section li:hover {
 
 body.light .contact-section {
   background-color: #f0f2f5;
-}
-
-.contact-section h2 {
-  /* already styled above */
 }
 
 .contact-section form {
@@ -591,7 +576,6 @@ body.light .contact-section .alert-danger {
   border-color: #f5c6cb;
 }
 
-/* ============= Animations ============= */
 
 @keyframes fadeInUp {
   from {
