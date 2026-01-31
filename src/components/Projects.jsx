@@ -4,22 +4,13 @@ const Projects = () => {
   const projects = [
     {
       name: "Library Management",
-      desc: "Organizes and automates all library operations.",
+      desc: "Organizes and enables all library operations online",
       live: "https://app-like-library-management.netlify.app",
       image: "https://via.placeholder.com/800x400?text=Library+Management",
       frontendcode:
         "https://github.com/charan1147/project-library-management--frontend.git",
       backendcode:
         "https://github.com/charan1147/project1-backend-library-management.git",
-    },
-    {
-      name: "Hotel Booking",
-      desc: "Book hotel rooms online easily with modern UI.",
-      live: "https://app-like-hotel-booking.netlify.app",
-      image: "https://via.placeholder.com/800x400?text=Hotel+Booking",
-      frontendcode:
-        "https://github.com/charan1147/project-hotel-booking-frontend.git",
-      backendcode: "https://github.com/charan1147/Project-Hotel-Bookings.git",
     },
     {
       name: "Coding Quiz",
@@ -42,11 +33,20 @@ const Projects = () => {
     {
       name: "Chat App",
       desc: "Real-time messaging with video and audio calls.",
-      live: "https://app-like-chat.netlify.app",
+      live: "https://app-like-chat1.netlify.app",
       image: "https://via.placeholder.com/800x400?text=Chat+App",
       frontendcode:
         "https://github.com/charan1147/project-chat-app-frontend.git",
       backendcode: "https://github.com/charan1147/project-chatting-app.git",
+    },
+    {
+      name: "Hotel Booking",
+      desc: "Book hotel rooms online easily with modern UI.",
+      live: "https://app-like-hotel-booking.netlify.app",
+      image: "https://via.placeholder.com/800x400?text=Hotel+Booking",
+      frontendcode:
+        "https://github.com/charan1147/project-hotel-booking-frontend.git",
+      backendcode: "https://github.com/charan1147/Project-Hotel-Bookings.git",
     },
   ];
 
@@ -69,7 +69,6 @@ const Projects = () => {
           <h3>{projects[current].name}</h3>
           <p>{projects[current].desc}</p>
 
-          {/* ✅ Live preview */}
           <div className="project-preview">
             <iframe
               src={projects[current].live}
@@ -104,7 +103,6 @@ const Projects = () => {
         </button>
       </div>
 
-      {/* Dots */}
       <div className="dots">
         {projects.map((_, idx) => (
           <span
